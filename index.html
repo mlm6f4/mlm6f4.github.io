@@ -111,6 +111,13 @@
 	</div><!-- /.carousel -->
 	</div><!-- /.container -->
 	
+	<script>
+		var iframeElement   = document.querySelector('iframe');
+		var iframeElementID = iframeElement.id;
+		var widget1         = SC.Widget(iframeElement);
+		var widget2         = SC.Widget(iframeElementID);
+		// widget1 === widget2
+	</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="Bootstrap/bootstrap/js/jquery-1.11.1.min.js"><\/script>')</script>
 	<script src="BootStrap/bootstrap/js/bootstrap.min.js"></script>
