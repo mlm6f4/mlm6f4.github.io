@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+	<script>
+  		SC.initialize({
+    	client_id: "d59e1b4f7a0b0e7f9301f89c5be397b6",
+  		});
+	</script>
 </head>
 <style>
 	body{
@@ -26,13 +32,6 @@
 	}
 </style>
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
-<script>
-		var iframeElement   = document.querySelector('iframe');
-		var iframeElementID = iframeElement.id;
-		var widget1         = SC.Widget(iframeElement);
-		var widget2         = SC.Widget(iframeElementID);
-		// widget1 === widget2
-</script>
 <body>
 	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
