@@ -4,14 +4,14 @@
 	<title>VIBE</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
-	<script>
-  		SC.initialize({
-    	client_id: "d59e1b4f7a0b0e7f9301f89c5be397b6",
-  		});
-	</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> <!-- BOOTSTRAP API --!>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> <!-- BOOTSTRAP API --!>
+    <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script> <!-- SOUNDCLOUD API --!>
+		<script>  //CONNECT TO SOUNDCLOUD
+		  	SC.initialize({
+    			client_id: "d59e1b4f7a0b0e7f9301f89c5be397b6",
+  			});
+		</script> 
 </head>
 <style>
 	body{
@@ -33,13 +33,15 @@
 </style>
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
 <body>
+	<!-- NAVBAR --!>
 	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
                 <div class="navbar-header">
                         <a class="navbar-brand" href="#">
                         	<img id="logo" src="vibe_logo.png" alt>
                         </a>
-                        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
+                        <!-- OLD CODE
+                        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -66,8 +68,10 @@
           				</form>
         		</div>
         </div>
-	</nav>
+	</nav> <!-- /.NAVBAR --!>
+	
 	<div class="container">
+	<!-- Carousel DIV --!>
 	<div id="this-carousel-id" class="carousel slide" data-ride="carousel" style="width: 1000px"><!-- class of slide for animation -->
   		<!--INDICATOR-->
   			<ol class="carousel-indicators">
@@ -75,39 +79,48 @@
     			<li data-target="#this-carousel-id" data-slide-to="1"></li>
     			<li data-target="#this-carousel-id" data-slide-to="2"></li>
     			<li data-target="#this-carousel-id" data-slide-to="3"></li>
-  			</ol>
+  			</ol> 
+  			
   		<!--WRAPPER FOR SLIDES-->	
   		<div class="carousel-inner" role="listbox">	
-    		<div class="item active" id="kanye_song"><!-- class of active since it's the first item -->
+  			<!-- 1st slide div --!>
+    		<div class="item active" id="kanye_song" style="width: 950px"><!-- class of active since it's the first item -->
     			<!-- Script provided by Soundcloud to embed a song --!>
 				<script type="text/JavaScript">
-  					SC.oEmbed("https://soundcloud.com/islanddefjam/mercy-kanye-west-feat-big-sean", {color: "ff0066"},  document.getElementById("kanye_song"));
+  					SC.oEmbed("https://soundcloud.com/brian-getrich/new-slaves-kanye-west-yeezus", {color: "ff0066"},  document.getElementById("kanye_song"));
 				</script>
-				<!-- EXPLORATION 1 code --!>
-      			<!-- <img class="img-responsive center-block" src="Kanye-stage.jpg" alt="http://placehold.it/1200x480" /> --!>
-				<!-- <iframe class="img-responsive center-block" width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/78185940&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe> --!>
-      			<!-- <div class="carousel-caption">
-        			 <h2>VIBE WITH KANYE</h2> 
-      			</div> --!>
-    		</div>
+				
+				<!-- EXPLORATION 1 code 
+      			 	<img class="img-responsive center-block" src="Kanye-stage.jpg" alt="http://placehold.it/1200x480" />
+      			 	<div class="carousel-caption">
+        			 	<h2>VIBE WITH KANYE</h2> 
+      				</div> 
+      			--!>
+    		</div> <!-- /.1st slide -->
+    		
+    		<!-- 2nd slide div --!>
     		<div class="item">
       			<img class="img-responsive center-block" src="drake-stage.jpg" alt="http://placehold.it/1200x481" />
       				<div class="carousel-caption">
         				<h2>VIBE WITH DRAKE</h2>
       				</div>
-    		</div>
+    		</div> <!-- /.2nd slide -->
+    		
+    		<!-- 3rd slide div --!>
     		<div class="item">
       			<img class="img-responsive center-block" src="kanye-stage2.jpg" alt="http://placehold.it/1200x481" />
       				<div class="carousel-caption">
         				<h2>VIBE WITH JAY-Z</h2>
       				</div>
-    		</div>
+    		</div> <!-- /.3rd slide -->
+    		
+    		<!-- 4th slide div --!>
     		<div class="item">
       			<img class="img-responsive center-block" src="asap-stage.jpg" alt="http://placehold.it/1200x481" />
       				<div class="carousel-caption">
         				<h2>VIBE WITH A$AP</h2>
       				</div>
-    		</div>
+    		</div> <!-- /.4th slide -->
   		</div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->
